@@ -10,8 +10,8 @@ import sys
 
 # --- Configuration ---
 BASE_URL = "http://localhost:3001/api/postgres"
-VALID_FEED_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 10]
-ITEM_COUNTS_TO_TEST = [1, 5, 10, 25, 50]
+VALID_FEED_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 10, 99, 100]
+ITEM_COUNTS_TO_TEST = [1, 5, 10, 25, 50, 100, 200, 500, 1000]
 REQUESTS_PER_COUNT = 1000
 MAX_WORKERS = 20
 REQUEST_TIMEOUT = 20

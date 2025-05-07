@@ -74,7 +74,10 @@ router.get('/random-redis-items/:feedId/:itemCount', async (req, res) => {
     const parsedItemCount = parseInt(itemCount, 10);
     const feedCacheKey = `feed:${feedId}:items`
 
+    const sampleStart = performance.now();
     const sampledItems = await redis.srandmember(feedCacheKey, parsedItemCount);
+    const sampleEnd = performance.now();
+    console.log(`Sampling redis took: ${sampleEnd - sampleStart}`);
 
     const pipeline = redis.multi();
 
